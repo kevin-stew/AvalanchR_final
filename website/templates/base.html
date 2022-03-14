@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<title>AvalanchR Inventory</title>
+</head>
+<body>
+    
+<!--NavBar Here-->
+<nav class="ct-nav">
+    <div></div>
+        <h1>AvalanchR</h1>
+        <!-- <img src="https://via.placeholder.com/50" alt="AvalanchR Logo"> -->
+    
+
+    <!--Nav Items-->
+    <div id="navbar">
+        <ul id="horizontal-list">
+            <a href="{{ url_for('site.home') }}">Home
+                <!-- <li>Home</li> -->
+            </a>
+            <a href="{{ url_for('site.inventory') }}">Inventory
+                <!-- <li>Inventory</li> -->
+            </a>
+            
+            <a href="{{ url_for('auth.upload') }}">Upload a Model
+                <!-- <li>Upload a Model</li> -->
+            </a>
+            <!--User Auth Check for SignIn/SignUp Nav Buttons-->
+            {% if current_user.is_authenticated %}
+            
+            <a href="{{ url_for('site.profile') }}">Profile
+                <!-- <li>Profile</li> -->
+            </a>
+            
+            
+            <a href="{{ url_for('auth.logout') }}">Log Out
+                <!-- <li>Log Out</li> -->
+            </a>
+            {% else %}
+            
+            <a href="{{ url_for('auth.login') }}">Log In
+                <!-- <li>Log In</li> -->
+            </a>
+            <a href="{{ url_for('auth.signup') }}">Sign Up
+                <!-- <li>Sign Up</li> -->
+            </a>
+            {% endif %}
+
+        </ul>
+    </div>
+  </nav>
+  <!--End of Nav-->
+
+  {% block content %}
+  {% endblock content %}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

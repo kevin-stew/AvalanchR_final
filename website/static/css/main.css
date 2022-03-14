@@ -1,0 +1,188 @@
+/*Nav Styles */
+/* *{border:red solid 1px;} */
+
+body, html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+.btn{
+    margin-top: 7px
+}
+
+.hero{
+  background-image: linear-gradient(to bottom, rgba(29, 29, 34, 0.52), rgba(1, 2, 3, 0.73)), url("../images/boulder2.jpg");
+  height: 100%;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative; */
+
+  color: white
+}
+
+/* .hero{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(30, 115, 172, 0,7), rgba(142, 57, 153, 0.6), url(../images/boulder1.jpg));
+
+    background-position: 35% 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+} */
+
+.landing-info h2{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-family: 'Helvetica';
+}
+.landing-info h5{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.index-btns{
+    margin-bottom: 3rem;
+}
+
+#logedinuser{
+    font-size: x-small; 
+    /* margin-top: -3rem; */
+}
+
+/* NAV BAR START */
+
+.ct-nav{
+    background-color: black;
+    display: flex;
+    /* justify-content: flex-start; */
+    color: white;
+    /* margin-bottom: 3rem; */
+}
+
+.ct-nav h1{
+    font-family: 'Black Caps';
+    align-self: flex-end;
+    margin-left: 10px;
+}
+
+/* #navbar{
+} */
+/* Target Main Logo Image */
+/* .ct-nav img{
+    min-width: 50%;
+    max-width: 100%;
+    margin-left: 2vw;
+} */
+
+ul#horizontal-list{
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 700px;
+    padding-top: 20px;
+    
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display:inline;
+    text-decoration:none;
+    padding: 0.5vw;
+    color: white;
+}
+
+/* ul#horizontal-list a:nth-last-child(1){
+    border: 2px solid grey;
+    border-radius: 11px;
+    margin-right: 0.2vw;
+} */
+
+/* NAV-BAR END */
+
+/* INDEX PAGE START */
+
+header {
+    /* min-height: 25rem; */
+    text-align: center;
+    /* padding: 5rem; */
+    justify-content: space-evenly;
+}
+
+
+#header-text{
+    text-align: center;
+}
+#middle-text{
+    text-align: center;
+}
+
+
+/* CARD FORMATING -- START */
+.card-group-user{
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 20px;
+    justify-content: center;
+}
+
+.card-group{
+    display: flex;
+    
+    /* flex-direction: column; */
+    /* max-width: 35rem; */
+    /* min-width: 30rem;*/
+    flex-wrap: wrap; 
+    margin: 20px;
+    /* display: flex; */
+
+    
+}
+
+.card{
+    border-radius: 5px;
+    max-width: 17rem;
+    min-width: 17rem;
+    margin: 10px;
+}
+.card-img-top{
+    height: 16rem;
+    width: auto
+}
+.card-text{
+    font-size: small;
+    font-style: italic;
+}
+.list-group-item{
+    font-size: small;
+}
+
+.card-links{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+#update{
+    color: #5f5f5f;
+}
+#delete{
+    color:rgb(192, 74, 74)
+}
+#buy{
+    color: #4b7556;
+}
+#download{
+    color: #545897;
+}
+
+#construction{
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD FORMATING -- END */

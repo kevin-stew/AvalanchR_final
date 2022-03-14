@@ -1,0 +1,48 @@
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    <div class="form-group">
+
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        
+        <fieldset id="Object Title">
+            {{  form.title.label }}
+            {{  form.title(class = 'form-control', placeholder = 'What is this thing?') }}
+        </fieldset>
+
+        <fieldset id="Description">
+            {{  form.description.label }}
+            {{  form.description(class = 'form-control', placeholder = 'In 300 characters or less please describe any unique features.') }}
+        </fieldset>
+        
+        <fieldset id="Dimensions">
+            {{  form.dimensions.label }}
+            {{  form.dimensions(class = 'form-control', placeholder = '~feet') }}
+        </fieldset>
+        
+        <fieldset id="Weight">
+            {{  form.weight.label }}
+            {{  form.weight(class = 'form-control', placeholder = '~lbs') }}
+        </fieldset>
+        
+        <fieldset id="Price">
+            {{  form.price.label }}
+            {{  form.price(class = 'form-control', placeholder = '$$') }}
+        </fieldset>
+        
+        <label>Select a 3D model preview image (.png or .jpg)</label>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+
+        </div>
+
+        <label>3D model scan file (.obj or .stl)</label>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" name="model" id="model">
+        </div>
+        
+        
+        {{ form.submit_button(class = 'btn btn-dark btn-block')  }}
+        
+    </div>
+</form>
+
