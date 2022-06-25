@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<header class="hero-section">
-    <h3 class="header-text"><b>Welcome to AvalanchR</b><br></h3>
-    
-    <h5 >{{ current_user.email }}</h5>
+<header class="hero-section">  
+    <br>  
+    <h5>Welcome {{ current_user.email }}!</h5>
+    <br>
 </header>
 
 <div class="container">
@@ -15,7 +15,7 @@
 </div>
 <br>
 
-    <h4 style="text-align: center;" class="md-3">Items you currently have posted on the site:</h4>
+    <h4 style="text-align: center;" class="md-3">Items you currently have posted for sale:</h4>
     <div class="card-group-user">
 
         {% for post in user_posts %}
@@ -44,9 +44,6 @@
             </div>
         </div>
         {% endfor %}
-
-
-
 
 </div>
 {% endblock content %}

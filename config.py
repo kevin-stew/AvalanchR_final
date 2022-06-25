@@ -24,7 +24,6 @@ class Config():
     UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER')
     ALLOWED_EXTENSIONS = os.environ.get('ALLOWED_EXTENSIONS')
 
-    
     #CLIENT_IMAGES = 
     #CLIENT_3DMODELS = 
     #MAX_IMAGE_FILESIZE = 5 * 1024 * 1024

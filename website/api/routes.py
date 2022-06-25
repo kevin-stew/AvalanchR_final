@@ -14,7 +14,7 @@ def getdata(current_user_token):
 
 
 # CREATE Post Route
-api.route('/posts', medthods=['POST'])
+api.route('/posts', methods=['POST'])
 @token_required
 def create_post(current_user_token):
     title = request.json['title']

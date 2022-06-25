@@ -63,7 +63,6 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f'User {self.token} has been added to the database.'
 
-
 # Post creation
 class Post(db.Model):
     id = db.Column(db.String(50), primary_key = True)
@@ -98,7 +97,14 @@ class Post(db.Model):
 # Creation of API Schema via the Marshmallow Object
 class PostSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'title', 'description', 'price', 'dimensions', 'weight', 'img_url', 'model_url']
+        fields = ['id', 
+                  'title', 
+                  'description', 
+                  'price', 
+                  'dimensions', 
+                  'weight', 
+                  'img_url', 
+                  'model_url']
 
 post_schema = PostSchema()
 posts_schema = PostSchema(many=True)

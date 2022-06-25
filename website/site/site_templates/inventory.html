@@ -10,9 +10,9 @@
 
 <!-- {{ posts }} -->
 
-<div class="card-group"> 
-
-    {% for post in posts %}
+<div class="d-flex flex-wrap">
+{% for post in posts %}
+<!-- <div class="card-group">  -->
     <div class="card">
 
         <img class="card-img-top" src="{{ post.img_url }}">
@@ -36,14 +36,13 @@
             <a href="{{ post.model_url }}" class="card-link" id="download">Download</a>
             <a href="{{ url_for('site.purchase') }}" class="card-link" id="buy">Buy</a> 
             {% endif %}
-                
-                
-            <!-- Get this flash to work -->
         </div>
-    </div>
-    {% endfor %}
 
+    </div>
+<!-- </div> -->
+    {% endfor %}
 </div>
+
 
 
 

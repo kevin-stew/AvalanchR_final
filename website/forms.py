@@ -15,7 +15,6 @@ class UserSignupForm(FlaskForm):
     confirm = PasswordField('Repeat Password')
     submit_button = SubmitField()
 
-
 class ObjectUploadForm(FlaskForm):
     title = StringField('Title', validators = [DataRequired()])
     description = StringField('Description', validators = [DataRequired()])

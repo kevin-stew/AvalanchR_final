@@ -14,8 +14,8 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 
-app.register_blueprint(site)
 app.register_blueprint(api)
+app.register_blueprint(site)
 app.register_blueprint(auth)
 
 root_db.init_app(app)

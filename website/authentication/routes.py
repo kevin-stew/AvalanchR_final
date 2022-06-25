@@ -122,7 +122,6 @@ def upload_image():
     #if file and allowed_file(file.filename):
     #filename = secure_filename(file.filename)
     file.save(os.path.join(Config.UPLOAD_FOLDER, file.filename))
-
     return '../../static/uploads/' + file.filename  #directory file path (static) + file name
 
 #-----------------------UPLOAD_MODEL-------------------------
@@ -214,5 +213,4 @@ def seller_email():
 def logout():
     logout_user()
     return redirect(url_for('site.home'))
-
 

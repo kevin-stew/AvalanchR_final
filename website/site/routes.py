@@ -9,7 +9,6 @@ def home():
     return render_template('index.html')
 
 
-
 @site.route('/inventory')
 def inventory():
     
@@ -24,7 +23,6 @@ def profile():
     user_posts = Post.query.filter_by(user_token = current_user.token) #generates info for ALL posts in db
     # posts.reverse() #reverses order of posts so most recent items show up first
 
-    
     return render_template('profile.html', user_posts = user_posts)
 
 
